@@ -1,7 +1,9 @@
 library(dplyr)
+#cheching for existing file or not
 if(!file.exists("./getdata"){dir.create("./getdata")}
 fileurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 destfile <- "./getdata/dataset.zip"
+#download data file
 downoad.file(fileurl,destfile,method="curl")
 if(!file.exists("dataset.zip)){unzip(destfile),exdir="getdata")}
 
