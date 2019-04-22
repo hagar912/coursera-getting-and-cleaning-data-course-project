@@ -56,5 +56,5 @@ colnames(all_singledataset) <- c("subject",features[,2],"activity")
 
 Data2<-aggregate(. ~subject + activity, all_singledataset, mean)
 Data2<-Data2[order(Data2$subject,Data2$activity),]
-write.table(Data2, file = "tidydata2.txt",row.name=FALSE)
+write.table(Data2, file = "tidy_data.txt",row.name=FALSE)
 
